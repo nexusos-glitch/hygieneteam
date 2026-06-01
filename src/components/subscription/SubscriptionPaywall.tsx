@@ -1,0 +1,1 @@
+export const SubscriptionPaywall = ({children}:any) => <>{children}</>;
