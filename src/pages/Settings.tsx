@@ -28,6 +28,7 @@ const Settings = () => {
       title: "Account",
       items: [
         { icon: User, label: "Profile", description: "Update your information", path: "/profile" },
+        { icon: Shield, label: "API Settings", description: "Manage your UtubeChat API integration", path: "/user/api-keys" },
         ...(subscriptionEnabled ? [{ icon: Receipt, label: "Billing History", description: "View invoices and payments", path: "/billing" }] : []),
       ],
     },
@@ -57,6 +58,7 @@ const Settings = () => {
     {
       title: "Admin",
       items: [
+        { icon: Globe, label: "CommandNexus API", description: "Manage global API proxy and credits", path: "/admin/api-keys" },
         { icon: Building2, label: "Business Branding", description: "Customize company appearance", path: "/admin/branding" },
         { icon: Globe, label: "White-Label Manager", description: "Manage deployments and resellers", path: "/admin/whitelabel" },
         { icon: Sparkles, label: "Manage Updates", description: "Create and publish app updates", path: "/admin/updates" },

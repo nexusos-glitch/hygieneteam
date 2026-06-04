@@ -84,5 +84,5 @@ export const getGPSStatus = (accuracy: number | null): 'excellent' | 'good' | 'w
   return 'none';
 };
 
-export default GPSStatusIndicator;
+export const GPSConnectionBanner = (props: any) => <div />;
 

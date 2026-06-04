@@ -52,6 +52,8 @@ import Pricing from "./pages/Pricing";
 import DataSharing from "./pages/DataSharing";
 import ImportedData from "./pages/ImportedData";
 import PaymentHistory from "./pages/PaymentHistory";
+import CommandNexusAdmin from "./pages/CommandNexusAdmin";
+import UserApiSettings from "./pages/UserApiSettings";
 
 const queryClient = new QueryClient();
 
@@ -108,6 +110,8 @@ const App = () => (
                   <Route path="/data-sharing" element={<ProtectedRoute><SubscriptionPaywall><DataSharing /></SubscriptionPaywall></ProtectedRoute>} />
                   <Route path="/imported-data" element={<ProtectedRoute><SubscriptionPaywall><ImportedData /></SubscriptionPaywall></ProtectedRoute>} />
                   <Route path="/client-portal" element={<ProtectedRoute><ClientPortal /></ProtectedRoute>} />
+                  <Route path="/admin/api-keys" element={<ProtectedRoute><SubscriptionPaywall><AppLayout><CommandNexusAdmin /></AppLayout></SubscriptionPaywall></ProtectedRoute>} />
+                  <Route path="/user/api-keys" element={<ProtectedRoute><SubscriptionPaywall><AppLayout><UserApiSettings /></AppLayout></SubscriptionPaywall></ProtectedRoute>} />
                   <Route path="*" element={<NotFound />} />
                 </Routes>
               </OnboardingProvider>
